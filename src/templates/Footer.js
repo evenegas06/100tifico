@@ -1,16 +1,16 @@
 import getData from '../utils/getData'
 
 const Footer = async () => {
-    const data = await getData()
+    const data = await getData();
 
-    let ancles = []
+    let ancles = [];
     for (let i = 1; i <= data.info.pages; i++){
-        ancles.push(i)
+        ancles.push(i);
     }
 
     let a = 0;
     const view = `
-    <div class="Footer-pages">
+    <div class="footer-pages">
         <h4>Pages</h4>
         <div>
             ${ancles.map(() => 

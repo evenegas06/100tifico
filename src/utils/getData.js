@@ -6,6 +6,7 @@ const getData = async (id) => {
         const response = await fetch(apiURL);
         const data = await response.json();
         return data;
+        
     } catch(error) {
         console.log('Fetch Error', error);
     }

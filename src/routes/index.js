@@ -18,13 +18,14 @@ const router = async () => {
   const content = null || document.getElementById('content');
   const footer = null || document.getElementById('footer');
 
-
   let hash = getHash();
   let route = await resolveRoutes(hash);
   let render = routes[route] ? routes[route] : Error404;
+
   header.innerHTML = await Header();
   content.innerHTML = await render();
   footer.innerHTML = await Footer();
+  console.log(hash);
 };
 
 export default router;
