@@ -25,7 +25,8 @@ const router = async () => {
   header.innerHTML = await Header();
   content.innerHTML = await render();
   footer.innerHTML = await Footer();
-  console.log(hash);
+
+  console.log(render.name);
 };
 
 export default router;

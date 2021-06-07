@@ -10,14 +10,12 @@ const Footer = async () => {
 
     let a = 0;
     const view = `
-    <div class="footer-pages">
-        <h4>Pages</h4>
-        <div>
-            ${ancles.map(() => 
-                `<a href="#/?page=${++a}/">${a}</a>`
-            ).join('')}
-        </div>
-    </div>
+    <p class="center-align" style="padding-top:50px;">Pagination</p>
+    <ul class="pagination">
+        ${ancles.map(() => 
+            `<li class=""><a href="#/?page=${++a}/">${a}</a</li>`
+        ).join('')}
+    </ul>
     `;
     return view
 }
